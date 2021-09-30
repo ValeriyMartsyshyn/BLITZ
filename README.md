@@ -1,2 +1,2 @@
 # BLITZ
-"BLITZ" team repository.
+Project repository.
