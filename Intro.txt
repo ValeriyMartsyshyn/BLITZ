@@ -1,3 +1,5 @@
-Bogdan Kharko. Skills: Python, Pandas, Presentation(MS PowerPoint). I would like to work with DataBase.
 Olia Veselovska. Skills: Python, Pandas, knowledge in DBMS, HTML. I would like to be Template Designer. 
 Sophia Muzyka. Skills: Presentation(MS PowerPoint), Python, Pandas. I would like to be UI/UX Designer.
+Valeriy Martsyshyn. Skills: Python, Pandas, HTML/CSS, SQL. I would like to be API Developer.
+Petro Sidliar. Skills: Python, Pandas, Numpy, XGBoost, JavaScript, JQuery, Linux Terminal, Flask, Sklearn, HTML/CSS, SQL. I would like to be API Developer.
+Bogdan Kharko. Skills: Python, Pandas, Presentation(MS PowerPoint). I would like to work with DataBase.
