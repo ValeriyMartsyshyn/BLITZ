@@ -46,14 +46,16 @@ img{
 .main{
     display: flex;
     flex-direction:row;
-    padding:0px;
 }
 aside{
-    margin-left:0px;
+    margin-left:-100px;
 }
-
+.image-top{
+    margin-right:100px;
+    margin-bottom:100px;
+}
 .title{
-    margin-left: 150px;
+    margin-left: 0px;
 }
 .leftimg {
     float:left; /* Выравнивание по левому краю */
@@ -63,3 +65,15 @@ aside{
     float: right; /* Выравнивание по правому краю  */ 
     margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
    }
+.text-end{
+    margin-top:25px;
+}
+.col-md-4{
+    margin-right: ;
+}
+.card mb-4 box-shadow{
+    width:1500px;
+}
+.container{
+    margin-left:0px;
+}
