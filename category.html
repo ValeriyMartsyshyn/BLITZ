@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'museums/category.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -16,113 +17,89 @@
 <body>
 
 
-  <nav class = 'navbar navbar-expand-md bg-light navbar-light' style="height:100px;">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="#" class = 'navbar-brand'>Logo</a>
-      </div>
-
-        <ul class="navbar-nav">
-          <li class='nav-item, underline' style='padding-top:2%;'>
-            <a href="#" class='nav-link active'>Ресторани</a>
-          </li>
-          <li class='nav-item, underline' style='padding-top:2%;'>
-            <a href="#" class='nav-link active'>Сім'я</a>
-          </li>
-          <li class='nav-item, underline' style='padding-top:2%;'>
-            <a href="#" class='nav-link active'>Розваги</a>
-          </li>
-          <li class='nav-item, underline' style='padding-top:2%;'>
-            <a href="#" class='nav-link active'>Музеї</a>
-          </li>
-          <li class='nav-item' style="padding-top:2%;">
-            <div>
-              <button type="button" class="btn btn-dark text-light me-2">Спланувати</button>
-            </div>
-          </li>
-        </ul>
-      </div>
-  </nav>
-
-
-  <div class='container' style='padding-top:15px;padding-bottom:15px;'>
-    <div class="row">
-      <form class="col-3 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-        <div class="row">
-          <div class='col-6'>
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          </div>
-          <div class="col-6">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </div>
+  <div class="container-fluid" style='background:#DCDCDC;'>
+    <header class="py-4 mb-2">
+      <div class="row">
+        <div class="col-6">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Logo</span>
+          </a>
         </div>
-      </form>
-    </div>
+        <div class="col-6">
+          <ul class="nav nav-pills, underline">
+            <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Розваги</h6></a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Ресторани</h6></a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Екскурсії</h6></a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Музеї</h6></a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Про нас</h6></a></li>
+            <div class="col-3" style="margin-left:10px;">
+              <button type="button" class="btn bg-dark text-light" style="margin-top:-4px;">Спланувати</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </header>
   </div>
 
 
+
+
+
   <div class='container'>
+    <br>
     <div class='row'>
       <div class='col-3'>
-        <aside class="sidebar">
-          <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-light">
-            <h3 style="text-align:center;">Фільтри</h3>
-            <hr>
-            <div>
-              <input type="checkbox" id="option1" name="1" value=" the lowest">
-              <label for="1"> Something one</label><br>
-              <input type="checkbox" id="option2" name="2" value="lower than standard">
-              <label for="2"> Something </label><br>
-              <input type="checkbox" id="option3" name="3" value="standard">
-              <label for="3"> Something else</label><br>
-              <input type="checkbox" id="option4" name="4" value="higher than standard">
-              <label for="4"> Something else</label><br>
-              <input type="checkbox" id="option5" name="5" value="the highest">
-              <label for="5"> Something else</label><br>
-              <input type="checkbox" id="option6" name="6" value="s">
-              <label for="6"> Something else</label><br>
-              <input type="checkbox" id="option7" name="7" value="l">
-              <label for="7"> Something else</label><br>
-              <input type="checkbox" id="option8" name="8" value="h">
-              <label for="8"> Something else</label><br>
-              <input type="checkbox" id="option9" name="9" value="s">
-              <label for="9"> Something else</label><br>
-              <input type="checkbox" id="option10" name="10" value="h">
-              <label for="10"> Something else</label><br>
-              <div class='multi-range' data-lbound='0' data-ubound='500'>
-                <br>
-                <hr>
-                <div data-role="page"></div>
-              </div>
-              <div class='multi-range' data-lbound='0' data-ubound='500'>
-                <br>
-                <hr>
-                <input type='range'
-                min='0' max='450' step='5' value='0'
-                oninput='this.parentNode.dataset.lbound=this.value;'>
-                <input type='range'
-                min='100' max='500' step='5' value='500'
-                oninput='this.parentNode.dataset.ubound=this.value;'>
-              </div>
+        <div class="container" style="background:#DCDCDC;height:700px;border-radius:5px;">
+          <h4 class='text-dark' style="text-align:center;padding-top:15px;">Фільтри</h4>
+          <hr class="bg-dark">
+          <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+          </form>
+          <div class="row">
+            <div class="col-6">
+              <form>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label>
+              </form>
+            </div>
+            <div class="col-6">
+              <form action="/action_page.php">
+                <label for="fname" style="color:black;">Minimum</label><br>
+                <input type="text" id="fname" name="fname" value="0"><br>
+                <label for="lname" style="color:black;">Maximum</label><br>
+                <input type="text" id="lname" name="lname" value="1000"><br><br>
+                <input type="submit" value="Submit">
+              </form>
             </div>
           </div>
-        </aside>
+        </div>
       </div>
 
 
       <div class="col-9">
         <h3>Заклади</h3>
         <hr>
+        {% for museum in all_museums %}
         <div class="card mb-4 box-shadow">
           <div class='row'>
             <div class='col-4'>
-              <img class="card-img-thumbnail" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 100%; width: 100%; display: inline-block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17dca0f35f2%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17dca0f35f2%22%3E%3Crect%20width%3D%22208%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2267.20000076293945%22%20y%3D%22118.04000034332276%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <img class="card-img-thumbnail" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 100%; width: 100%; display: inline-block;" src="{{ museum.img_url }}" data-holder-rendered="true">
             </div>
             <div class="col-8">
               <div class="card-body">
-                <h4>Name</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="container-fluid">
+                <h4>{{ museum.name }}</h4>
+                <br>
+                <br>
                   <div class="row">
                     <div class="col-4">
                       <div class="row">
@@ -147,7 +124,7 @@
                           </svg>
                         </div>
                         <div class="col-6" style='padding:0;'>
-                          <p style="text-align:left;">09:00-17:00</p>
+                          <p style="text-align:left;">{{museum.start_work_hour}}-{{museum.end_work_hour}}</p>
                           <p style="text-align:left;">10:00-16:00</p>
                         </div>
                       </div>
@@ -161,103 +138,52 @@
                           </svg>
                         </div>
                         <div class="col-6">
-                          <p style="text-align:left;">120$</p>
+                          <p style="text-align:left;">{{museum.price}} грн</p>
                           <p style="text-align:left;">160$</p>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <br>
+                  <br>
+                  <div class="row" style="height:80px;">
+                    <div class="col-6">
+                      <p>Phone</p>
+                    </div>
+                    <div class="col-6">
+                      <div class="button-group-vertical">
+                        <button type="button" class="btn btn-secondary">
+                          Додати
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button>
+                      </div>
+                    </div>
+                  </div>
                   <div class="row">
-                    <div class="col-12" style='margin-left:75%;'>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button>
+                    <div class="col-6" style="text-align:left;">
+                      <p>Address</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class='row'>
-            <div class='col-4'>
-              <img class="card-img-thumbnail" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 100%; width: 100%; display: inline-block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20226%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17dca0f35f2%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17dca0f35f2%22%3E%3Crect%20width%3D%22208%22%20height%3D%22226%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2267.20000076293945%22%20y%3D%22118.04000034332276%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-                <h4>Name</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="row">
-                        <div class="col-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
-                            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-                            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                          </svg>
-                        </div>
-                        <div class="col-6">
-                          <p style="text-align:left;">Mon-Fri</p>
-                          <p style="text-align:left;">Sat-Sun</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="row">
-                        <div class="col-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                          </svg>
-                        </div>
-                        <div class="col-6" style='padding:0;'>
-                          <p style="text-align:left;">09:00-17:00</p>
-                          <p style="text-align:left;">10:00-16:00</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="row">
-                        <div class="col-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
-                            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/>
-                            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/>
-                          </svg>
-                        </div>
-                        <div class="col-6">
-                          <p style="text-align:left;">120$</p>
-                          <p style="text-align:left;">160$</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12" style='margin-left:75%;'>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="container-fluid">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Про нас</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Ресторани</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Сім'я</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Розваги</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Музеї</a></li>
-      </ul>
-      <p class="text-center text-muted">© 2021 Company, Inc</p>
-    </footer>
-  </div>
+  <footer class="py-2" style="background:#DCDCDC">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Розваги</h6></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Ресторани</h6></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Екскурсії</h6></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Музеї</h6></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Про нас</h6></a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 BLITZ Team</p>
+  </footer>
 
 
 </body>
