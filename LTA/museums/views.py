@@ -8,8 +8,13 @@ def museums(request):
     data = {
         'all_museums': all_museums
     }
-    return render(request, 'museums/test.html', data)
+    return render(request, 'museums/category.html', data)
 
 
-def museum_id(request, id_museums):
-    return HttpResponse(f'{id_museums=}')
+def museum_id(request, id_museum):
+
+    museum = Museums.objects.get(id=id_museum)
+    data = {
+        'museum': museum
+    }
+    return render(request, 'museums/item.html', data)
