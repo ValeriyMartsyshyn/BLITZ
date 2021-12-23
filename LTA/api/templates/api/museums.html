@@ -1,80 +1,7 @@
-{% extends "main/base.html" %}
-{% load static %}
-{% block head %}
-  <link rel="stylesheet" href="{% static 'museums/category.css' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-{% endblock %}
-{% block content %}
-  <div class='container'>
-    <br>
-    <div class='row'>
-      <div class='col-3'>
-        <div class="container filter" style="background:#DCDCDC;height:900px;border-radius:5px;">
-          <h4 class='text-dark' style="text-align:center;padding-top:15px;">Фільтри</h4>
-          <hr class="bg-dark">
-          <div class="row">
-            <div class="col-12">
-              <h5>Вид</h5><br>
-              <form>
-                <label class="custom-checkbox">
-                  <input type="checkbox" value="value-1">
-                    Природничі
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" value="value-1">
-                    Меморіальні
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" value="value-1">
-                    Мистецькі
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" value="value-1">
-                    Галереї
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" value="value-1">
-                    Історичні
-                </label>
-              </form>
-              <br>
-              <h5>Ціна</h5><br>
-              <form>
-                <div class="input-group">
-                  <div class="input-group">
-                    <span class="input-group-text" id="">Від:</span>
-                  </div>
-                  <input type="text" class="form-control">
-                  <div class="input-group">
-                    <span class="input-group-text" id="">До:</span>
-                  </div>
-                  <input type="text" class="form-control">
-                   <br>
-                  <h5>Рейтинг</h5><br>
-                  <div class="input-group">
-                      <span class="input-group-text" id="">Зірок:</span>
-                    </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
-                <div >
-                  <input class="filter" type="button" value="Підтвердити">
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-9 content">
+      <div class="col-9">
         <h3>Заклади</h3>
         <hr>
-        {% for museum in all_museums.object_list %}
+        {% for museum in all_museums %}
         <div class="card mb-4 box-shadow">
           <div class='row'>
             <div class='col-4'>
@@ -132,9 +59,7 @@
                   <br>
                   <!--<div class="row" style="height:80px;">
                     <div class="col-6">
-
                     </div>
-
                   </div>-->
                   <div class="row">
                     <div class="col-6" style="text-align:left;">
@@ -182,25 +107,5 @@
               </div>
             </div>
           </div>
-          {% endfor %}
-
-          <div class="pages row m-3 justify-content-center text-center">
-            <div class="col-2">
-              <a class="btn btn-success" href="?page=1" role="button"><<</a>
-            </div>
-            <div class="col-2">
-              <a class="btn btn-success" href="?page={% if all_museums.has_previous %}{{ all_museums.previous_page_number }}{% else %}1{% endif %}" role="button"><</a>
-            </div>
-            <div class="col-2">
-              <a class="btn btn-success" href="?page={% if all_museums.has_next %}{{ all_museums.next_page_number }}{% else %}{{ pages.num_pages }}{% endif %}" role="button">></a>
-            </div>
-            <div class="col-2">
-              <a class="btn btn-success" href="?page={{ pages.num_pages }}" role="button">>></a>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
-    </div>
-    <script src="{% static 'museums/category_filter.js' %}"></script>
-{% endblock %}
-
