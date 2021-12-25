@@ -20,21 +20,6 @@ $('input.filter').click( function(){
             rating = 0
         }
 
-//        data = $.get('../api/museums/filter', data = {
-//            'nature': nature,
-//            'memorial': memorial,
-//            'art': art,
-//            'gallery': gallery,
-//            'history': history,
-//            'price_min': price_min,
-//            'price_max': price_max,
-//            'rating': rating
-//        }, dataType = 'html')
-//
-//
-//        $('div.content').html(data)
-//        console.log(data)
-
         $.ajax({
             url: '../api/museums/filter',
             method: 'GET',
