@@ -10,7 +10,7 @@ class Museums(models.Model):
     end_work_hour = models.CharField(max_length=10)
     description = models.TextField()
     rating = models.DecimalField(max_digits=3, decimal_places=1)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=80)
     category = models.IntegerField(null=True)
 
     def __str__(self):

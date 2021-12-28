@@ -10,6 +10,11 @@ def get_stars(value):
     return range(int(value))
 
 
+@register.filter
+def get_stars_o(value):
+    return range(5 - int(value))
+
+
 def museums(request):
     all_museums = Museums.objects.all()
     page = request.GET.get('page', 1)

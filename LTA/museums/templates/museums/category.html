@@ -3,10 +3,14 @@
 {% block head %}
   <link rel="stylesheet" href="{% static 'museums/category.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/v4-shims.js"></script>
+
+
 
 {% endblock %}
 {% block content %}
-  <div class='container'>
+  <div class='container' style="margin-top:120px;">
     <br>
     <div class='row'>
       <div class='col-3'>
@@ -72,7 +76,7 @@
 
 
       <div class="col-9 content">
-        <h3>Заклади</h3>
+        <h3>Музеї</h3>
         <hr>
         {% for museum in all_museums.object_list %}
         <div class="card mb-4 box-shadow">
@@ -130,13 +134,7 @@
                   </div>
                   <br>
                   <br>
-                  <!--<div class="row" style="height:80px;">
-                    <div class="col-6">
-
-                    </div>
-
-                  </div>-->
-                  <div class="row">
+                  <div class="row" style="margin-top:8px;">
                     <div class="col-6" style="text-align:left;">
                       <div class="container-fluid" style="item-align:center">
                         <div class="row">
@@ -162,7 +160,10 @@
                           <div class="d-flex justify-content-left">
                             <div class="stars">
                               {% for i in museum.rating|get_stars %}
-                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              {% endfor %}
+                              {% for i in museum.rating|get_stars_o %}
+                              <i class="fa fa-star-o" aria-hidden="true"></i>
                               {% endfor %}
                             </div>
                           </div>
@@ -171,10 +172,12 @@
                     </div>
                     <div class="col-6">
                       <div class="button-group-vertical">
-                        <button type="button" class="btn btn-secondary">
-                          Додати
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button>
+                        <a href="#" class="plan_a" style="text-decoration:none;">
+                          <div class="plan_div add">
+                            <p style="color:#fff;margin:0px;font-size:16px;">Додати</p>
+                          </div>
+                        </a>
+                        <a href="{{ museum.id }}" style="text-decoration:none;"><button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button></a>
                       </div>
                     </div>
                   </div>
@@ -192,6 +195,9 @@
               <a class="btn btn-success" href="?page={% if all_museums.has_previous %}{{ all_museums.previous_page_number }}{% else %}1{% endif %}" role="button"><</a>
             </div>
             <div class="col-2">
+              <a class="btn btn-success">{{ all_museums.number }}</a>
+            </div>
+            <div class="col-2">
               <a class="btn btn-success" href="?page={% if all_museums.has_next %}{{ all_museums.next_page_number }}{% else %}{{ pages.num_pages }}{% endif %}" role="button">></a>
             </div>
             <div class="col-2">
@@ -202,5 +208,6 @@
       </div>
     </div>
     <script src="{% static 'museums/category_filter.js' %}"></script>
+    <script src="{% static 'museums/cart.js' %}"></script>
 {% endblock %}
 
