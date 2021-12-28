@@ -20,3 +20,19 @@ def museums(request):
     }
 
     return render(request, 'api/museums.html', data)
+
+
+def checkout_add(request):
+    product_id = request.GET.get('id')
+    if request.session.get('cart', None):
+        if product_id in request.session['cart']:
+            pass
+
+        else:
+            products = request.session['cart']
+            products.append(int(product_id))
+            request.session['cart'] = products
+    else:
+        request.session['cart'] = [product_id]
+    return HttpResponse('OK')
+

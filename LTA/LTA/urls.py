@@ -19,6 +19,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('museums/', include('museums.urls')),
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    path('checkout/', include('checkout.urls'))
 
 ]

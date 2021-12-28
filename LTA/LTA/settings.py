@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'museums',
     'restaurants',
     'api',
+    'checkout',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
