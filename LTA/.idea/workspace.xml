@@ -2,46 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12d660d7-e883-4a8d-a81a-e93cf6e6af15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Intro.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/LTA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/migrations/0002_auto_20211220_1443.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/migrations/0003_alter_museums_rating.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/static/museums/category.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/templates/museums/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/museums/templates/museums/item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurants/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project_description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LTA/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/LTA/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LTA/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/LTA/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museums/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/museums/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museums/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/museums/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museums/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/museums/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museums/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/museums/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
