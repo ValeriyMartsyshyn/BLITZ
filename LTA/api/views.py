@@ -25,7 +25,7 @@ def museums(request):
 def checkout_add(request):
     product_id = request.GET.get('id')
     if request.session.get('cart', None):
-        if product_id in request.session['cart']:
+        if int(product_id) in request.session['cart']:
             pass
 
         else:
@@ -35,4 +35,14 @@ def checkout_add(request):
     else:
         request.session['cart'] = [product_id]
     return HttpResponse('OK')
+
+
+def checkout_delete(request):
+    product_id = request.GET.get('id')
+    product_id = int(product_id)
+    temp = request.session['cart']
+    temp.remove(product_id)
+    request.session['cart'] = temp
+    return HttpResponse('OK')
+
 
