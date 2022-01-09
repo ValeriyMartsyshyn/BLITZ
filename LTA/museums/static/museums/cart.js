@@ -8,5 +8,6 @@ $('.add').click(function (){
             'id': product
             }
         })
+    alert('Товар додано в корзину')
 })
 

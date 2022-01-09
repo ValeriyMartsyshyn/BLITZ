@@ -80,10 +80,10 @@
               <br>
               <div class="row">
                 <div class="col-6">
-                  <p>Balance:</p>
+                  <p>Залишок:</p>
                 </div>
                 <div class="col-6">
-                  <p>(budget-sum)</p>
+                  <p>{{ budget }}грн</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
           <div class="col-4">
             <a href="#" class="plan_a" style="text-decoration:none;">
               <div class="plan_div">
-                <p style="color:#fff;margin:0px;font-size:16px;">Form PDF</p>
+                <p id='form' style="color:#fff;margin:0px;font-size:16px;">Form PDF</p>
               </div>
             </a>
           </div>
@@ -112,4 +112,5 @@
       </div>
     </div>
     <script src="{% static 'checkout/delete_button.js' %}"></script>
+    <script src="{% static 'checkout/form_pdf.js' %}"></script>
 {% endblock %}

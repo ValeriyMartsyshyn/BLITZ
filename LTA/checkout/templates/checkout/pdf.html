@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body{
+            height:1754px;
+            width:1240px;
+            margin:auto;
+          }
+
+          .content{
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+          }
+
+          .icons{
+            display: flex;
+            justify-content: space-between;
+            margin:40px;
+            width:70%;
+          }
+
+          .icon{
+            display: flex;
+            justify-content: center;
+            width:100%;
+          }
+
+          .properties{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+          }
+
+          .description{
+            width: 70%;
+          }
+
+          .contacts{
+            display:flex;
+            justify-content: space-between;
+            width:70%;
+          }
+          p{
+            margin:0px;
+            margin-bottom: 20px;
+          }
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+
+    {% for museum in museums %}
+    <div class="content">
+      <h1>{{ museum.name }}</h1>
+      <br>
+      <img src="2.jpg" alt="" style="max-width:1000px;border-radius:10px;">
+
+
+      <div class="icons">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+          <div class="properties">
+            <p style="text-align:left;font-size:26px;">Пн-Пт</p>
+            <p style="text-align:left;font-size:26px;">Сб-Нд</p>
+          </div>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+          </svg>
+          <div class="properties">
+            <p style="text-align:left;font-size:26px;">{{museum.start_work_hour}}-{{museum.end_work_hour}}</p>
+            <p style="text-align:left;font-size:26px;">10:00-16:00</p>
+          </div>
+        </div>
+        <div class="icon fee">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/>
+            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/>
+          </svg>
+          <div class="properties">
+            <p style="text-align:left;font-size:26px;">{{museum.price}} грн</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="description">
+        <p style="font-size:22px;">{{ museum.description }}</p>
+      </div>
+      <div class="contacts">
+        <p style="font-size:26px;">{{museum.address}}</p>
+        <p style="font-size:26px;">{{museum.phone_number}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </body>
+</html>

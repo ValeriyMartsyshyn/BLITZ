@@ -1,7 +1,9 @@
 from django.shortcuts import render, HttpResponse
+from django.http import FileResponse
 from museums.models import Museums
 from django.db.models import Q
 from .filters import filter_museums
+from django.template.loader import render_to_string
 
 
 def museums(request):
@@ -33,7 +35,7 @@ def checkout_add(request):
             products.append(int(product_id))
             request.session['cart'] = products
     else:
-        request.session['cart'] = [product_id]
+        request.session['cart'] = [int(product_id)]
     return HttpResponse('OK')
 
 
@@ -44,5 +46,7 @@ def checkout_delete(request):
     temp.remove(product_id)
     request.session['cart'] = temp
     return HttpResponse('OK')
+
+
 
 
