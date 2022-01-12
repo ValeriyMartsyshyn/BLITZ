@@ -185,19 +185,19 @@
 
           <div class="pages row m-3 justify-content-center text-center">
             <div class="col-2">
-              <a class="btn btn-success" href="?page=1" role="button"><<</a>
+              <a class="btn btn-success" style="color: #fff;background:#000;" href="?page=1" role="button"><<</a>
             </div>
             <div class="col-2">
-              <a class="btn btn-success" href="?page={% if all_museums.has_previous %}{{ all_museums.previous_page_number }}{% else %}1{% endif %}" role="button"><</a>
+              <a class="btn btn-success" style="color: #fff;background:#000;" href="?page={% if all_museums.has_previous %}{{ all_museums.previous_page_number }}{% else %}1{% endif %}" role="button"><</a>
             </div>
             <div class="col-2">
-              <a class="btn btn-success">{{ all_museums.number }}</a>
+              <a class="btn btn-success" style="color: #fff;background:#000;">{{ all_museums.number }}</a>
             </div>
             <div class="col-2">
-              <a class="btn btn-success" href="?page={% if all_museums.has_next %}{{ all_museums.next_page_number }}{% else %}{{ pages.num_pages }}{% endif %}" role="button">></a>
+              <a class="btn btn-success" style="color: #fff;background:#000;" href="?page={% if all_museums.has_next %}{{ all_museums.next_page_number }}{% else %}{{ pages.num_pages }}{% endif %}" role="button">></a>
             </div>
             <div class="col-2">
-              <a class="btn btn-success" href="?page={{ pages.num_pages }}" role="button">>></a>
+              <a class="btn btn-success" style="color: #fff;background:#000;" href="?page={{ pages.num_pages }}" role="button">>></a>
             </div>
           </div>
         </div>
