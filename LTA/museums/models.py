@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Museums(models.Model):
-    name = models.CharField(max_length=50)
-    address = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=150)
     price = models.IntegerField()
     img_url = models.CharField(max_length=200)
     start_work_hour = models.CharField(max_length=10)

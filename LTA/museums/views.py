@@ -15,6 +15,11 @@ def get_stars_o(value):
     return range(5 - int(value))
 
 
+@register.filter
+def get_img(museum):
+    return f'/static/museums/photos/{museum.id}.jpg'
+
+
 def museums(request):
     all_museums = Museums.objects.all()
     page = request.GET.get('page', 1)
@@ -39,3 +44,4 @@ def museum_id(request, id_museum):
         'museum': museum
     }
     return render(request, 'museums/item.html', data)
+
