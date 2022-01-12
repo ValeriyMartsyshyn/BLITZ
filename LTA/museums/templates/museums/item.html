@@ -27,7 +27,9 @@
                 <div class="card mb-4 box-shadow">
                   <div class='row'>
                     <div class="col-12">
-                      <img src="{{ museum|get_img }}" alt="" style = "max-width:100%;">
+                      <div style="display:flex; justify-content:center;width:100%;">
+                        <img src="{{ museum|get_img }}" alt="" style = "max-width:100%;">
+                      </div>
                       <div class="card-body">
                         <div class="row">
                           <div class="col-8" style="padding:10px;">
@@ -35,7 +37,7 @@
                           </div>
                           <div class="col-4" style="float:right;">
                             <button type="button" class="btn btn-secondary add">
-                              <p id="{{ museum.id }}">Додати</p>
+                              <p style="margin-bottom:0px;" id="{{ museum.id }}">Додати</p>
                             </button>
                           </div>
                         </div>
@@ -126,8 +128,6 @@
         </div>
       </div>
 
-    </div>
-  </body>
   <script src="{% static 'museums/cart.js' %}"></script>
 </html>
 
