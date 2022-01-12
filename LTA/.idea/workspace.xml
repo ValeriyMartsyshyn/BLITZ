@@ -22,8 +22,10 @@
     <list default="true" id="12d660d7-e883-4a8d-a81a-e93cf6e6af15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/checkout/pdf_files/plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/pdf_files/plan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/pdf.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/templates/checkout/pdf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museums/templates/museums/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/museums/templates/museums/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/templates/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/checkout/static/checkout" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\lviv_tourist_adviser\LTA\main\static\main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\lviv_tourist_adviser\LTA\checkout\static\checkout" />
+      <recent name="C:\Users\hp\lviv_tourist_adviser\LTA\main\static" />
+      <recent name="C:\Users\hp\lviv_tourist_adviser\LTA\main\static\base\photos" />
       <recent name="C:\Users\hp\lviv_tourist_adviser\LTA\main\templates\main" />
     </key>
   </component>
@@ -73,6 +81,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1640069316940">
