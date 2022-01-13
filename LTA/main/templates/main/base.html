@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +24,7 @@
         padding-bottom:0;
     }
     .underline li a:hover{
-        border-bottom:2px solid #000000;
+        border-bottom:2px solid #fff;
     }
     .underline{
         margin-left:5%;
@@ -43,25 +44,25 @@
 </style>
 
 
-  <div class="container-fluid fixed-top" style='background:#dcdcdc;'>
-    <header class="py-4 mb-2">
+  <div class="container-fluid fixed-top" style='background: rgb(254,255,0);
+background: linear-gradient(160deg, rgba(254,255,0,1) 10%, rgba(255,174,0,1) 40%, rgba(255,122,0,1) 100%);'>
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-6">
                     <div class="col-1">
                         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                        <span class="fs-4">Logo</span>
+                        <span class="fs-4"><img width="200" src="{% static 'main/LTA_logo.png' %}" alt=""></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6" style="display:flex;align-items:center;justify-content:flex-end;">
                     <ul class="nav nav-pills, underline" style="float:right;margin-left:0px;">
-                        <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Розваги</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Ресторани</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Екскурсії</h6></a></li>
-                        <li class="nav-item"><a href="{% url 'museums' %}" class="nav-link text-dark"><h6>Музеї</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-dark"><h6>Про нас</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Розваги</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Ресторани</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Екскурсії</h6></a></li>
+                        <li class="nav-item"><a href="{% url 'museums' %}" class="nav-link text-light"><h6>Музеї</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Про нас</h6></a></li>
                         <li style="margin-left:10px;">
                             <div class="col-12">
                                 <a href="{% url 'checkout' %}" class="plan_a" style="text-decoration:none;">
@@ -83,31 +84,30 @@
   {% endblock %}
   </div>
 
-  <div class="container-fluid" style='background:#dcdcdc;margin-top:10px;'>
+  <div class="container-fluid" style='background: #ffae00;margin-top:10px;'>
     <footer class="py-2">
         <div class="container">
             <div class="row">
                 <div class="col-8">
                     <div class="col-1">
                         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                        <span class="fs-4">Logo</span>
+                        <span class="fs-4"><img width="200" src="{% static 'main/LTA_logo.png' %}" alt=""></span>
                         </a>
                     </div>
                 </div>
                 <div class="col-4">
                     <ul class="nav justify-content-right pb-3 mb-3" style="float:right;">
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Розваги</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Ресторани</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Екскурсії</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Музеї</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><h6>Про нас</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-light"><h6>Розваги</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-light"><h6>Ресторани</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-light"><h6>Екскурсії</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-light"><h6>Музеї</h6></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-light"><h6>Про нас</h6></a></li>
                      </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <p class="text-center text-muted">© 2022 BLITZ Team</p>
+                    <p class="text-center text-light">© 2022 BLITZ Team</p>
                 </div>
             </div>
         </div>
