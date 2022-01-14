@@ -23,7 +23,7 @@
         border-bottom:none;
         padding-bottom:0;
     }
-    .underline li a:hover{
+    .underline .page a:hover{
         border-bottom:2px solid #fff;
     }
     .underline{
@@ -49,20 +49,21 @@ background: linear-gradient(160deg, rgba(254,255,0,1) 10%, rgba(255,174,0,1) 40%
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <div class="col-1">
                         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                         <span class="fs-4"><img width="200" src="{% static 'main/LTA_logo.png' %}" alt=""></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-6" style="display:flex;align-items:center;justify-content:flex-end;">
+                <div class="col-8" style="display:flex;align-items:center;justify-content:flex-end;">
                     <ul class="nav nav-pills, underline" style="float:right;margin-left:0px;">
-                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Розваги</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Ресторани</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Екскурсії</h6></a></li>
-                        <li class="nav-item"><a href="{% url 'museums' %}" class="nav-link text-light"><h6>Музеї</h6></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-light"><h6>Про нас</h6></a></li>
+                        <li class="nav-item, page"><a href="#" class="nav-link text-light"><h6>Розваги</h6></a></li>
+                        <li class="nav-item, page"><a href="#" class="nav-link text-light"><h6>Ресторани</h6></a></li>
+                        <li class="nav-item, page"><a href="#" class="nav-link text-light"><h6>Екскурсії</h6></a></li>
+                        <li class="nav-item, page"><a href="{% url 'museums' %}" class="nav-link text-light"><h6>Музеї</h6></a></li>
+                        <li class="nav-item, page"><a href="#" class="nav-link text-light"><h6>Про нас</h6></a></li>
+                        <li class="nav-item" style="display:flex;align-items:center;"><h6 style="margin-bottom:5px;font-weight:bold;">1700.99₴</h6></li>
                         <li style="margin-left:10px;">
                             <div class="col-12">
                                 <a href="{% url 'checkout' %}" class="plan_a" style="text-decoration:none;">
