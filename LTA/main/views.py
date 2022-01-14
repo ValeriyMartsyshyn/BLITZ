@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Main page')
+    return render(request, 'main/main.html')
 
 
 def about(request):
@@ -12,3 +12,7 @@ def about(request):
 
 def cart(request):
     return HttpResponse('Client cart')
+
+
+def result_page(request):
+    return render(request, 'main/res.html')
