@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <style>
-      body{
+          body{
             height:1754px;
             width:1240px;
             margin:auto;
@@ -51,22 +51,24 @@
           }
           .header{
             display:flex;
-            justify-content:flex-start;
+            justify-content:space-between;
+            margin-bottom:50px;
           }
 
     </style>
     <title></title>
   </head>
   <body>
-  <div class="header">
-    <img src="{% static 'checkout/LTA_logo.png' %}">
-  </div>
+  <div style="margin-top:50px;">
+    <div class="header">
+      <img src="{% static 'checkout/LTA_logo.png' %}" width="200px">
+      <p style="font-size:26px;">Дата: 21.11.2022</p>
+    </div>
     {% for museum in museums %}
     <div class="content" style="margin-bottom:50px;">
       <h1>{{ museum.name }}</h1>
       <br>
-      <img src="2.jpg" alt="" style="max-width:1000px;border-radius:10px;">
-
+      <img src="{{ museum|get_img }}" alt="" style="border-radius:10px;">
 
       <div class="icons">
         <div class="icon">
@@ -110,5 +112,6 @@
       </div>
     </div>
     {% endfor %}
+  </div>
   </body>
 </html>
