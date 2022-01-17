@@ -1,0 +1,22 @@
+.underline li a{
+    border-bottom:none;
+    padding-bottom:0;
+}
+.underline .page a:hover{
+    border-bottom:2px solid #fff;
+}
+.underline{
+    margin-left:5%;
+}
+.plan_div{
+    background:#000;
+    width:100%;
+    height:100%;
+    text-align:center;
+    border-radius:6px;
+    padding:13px;
+    margin-top:-5px;
+}
+.plan_a .plan_div:hover{
+    background:gold;
+}

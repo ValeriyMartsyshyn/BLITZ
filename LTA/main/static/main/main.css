@@ -87,3 +87,8 @@ input{
   border-radius: 5px;
   padding:5px;
 }
+
+img.d-block{
+    height:300px;
+    width:300px;
+}
